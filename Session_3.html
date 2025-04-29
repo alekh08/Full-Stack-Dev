@@ -1,0 +1,51 @@
+<!-- Write a JavaScript function called greet that takes no arguments and simply logs "Hello, World!" to the console when called. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greet Function</title>
+</head>
+<body>
+    <h2>Call Greet Function</h2>
+    <button onclick="greet()">Say Hello</button>
+    <p>Check the browser console to see the message.</p>
+
+    <script>
+        // Function that logs "Hello, World!" to the console
+        function greet() {
+            console.log("Hello, World!");
+        }
+    </script>
+</body>
+</html>
+
+
+--------------------------------------------------------------------------------------------------------------------
+<!-- Write a JavaScript function called calculateArea that takes two arguments length and width, and returns the area of a rectangle. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Area</title>
+</head>
+<body>
+    <h2>Area of a Rectangle</h2>
+    <input type="number" id="length" placeholder="Enter length">
+    <input type="number" id="width" placeholder="Enter width">
+    <button onclick="showArea()">Calculate Area</button>
+    <p id="result"></p>
+
+    <script>
+        // Function that calculates area
+        function calculateArea(length, width) {
+            return length * width;
+        }
+
+        function showArea() {
+            let length = parseFloat(document.getElementById("length").value);
+            let width = parseFloat(document.getElementById("width").value);
+            let area = calculateArea(length, width);
+            document.getElementById("result").innerText = "Area: " + area;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+Session 2
+ 
+ <!-- Write a javascript program that checks whether a given number is positive,negative, or zero,and displays an appropriate message. -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Number Sign Checker</title>
+ </head>
+ <body>
+     <h2>Check Number Type</h2>
+     <input type="number" id="checkNumber" placeholder="Enter a number">
+     <button onclick="checkNumber()">Check</button>
+     <p id="result"></p>
+ 
+     <script>
+         function checkNumber() {
+             let num = parseFloat(document.getElementById("checkNumber").value);
+             let message = "";
+ 
+             if (num > 0) {
+                 message = "The number is Positive.";
+             } else if (num < 0) {
+                 message = "The number is Negative.";
+             } else {
+                 message = "The number is Zero.";
+             }
+ 
+             document.getElementById("result").innerText = message;
+         }
+     </script>
+ </body>
+ </html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+<!-- Write a javascript program that takes a number representing a day of the week (1 for sunday,2 for monday,etc.)and prints the corresponding day name. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day of the Week</title>
+</head>
+<body>
+    <h2>Get Day Name</h2>
+    <input type="number" id="dayNumber" placeholder="Enter number (1-7)">
+    <button onclick="getDay()">Show Day</button>
+    <p id="output"></p>
+
+    <script>
+        function getDay() {
+            let day = parseInt(document.getElementById("dayNumber").value);
+            let dayName;
+
+            switch (day) {
+                case 1: dayName = "Sunday"; break;
+                case 2: dayName = "Monday"; break;
+                case 3: dayName = "Tuesday"; break;
+                case 4: dayName = "Wednesday"; break;
+                case 5: dayName = "Thursday"; break;
+                case 6: dayName = "Friday"; break;
+                case 7: dayName = "Saturday"; break;
+                default: dayName = "Invalid input. Enter a number from 1 to 7.";
+            }
+
+            document.getElementById("output").innerText = dayName;
+        }
+    </script>
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+<!-- Write a javascript program that prints numbers from 1 to 10 using a while loop and then using a for loop. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Loop</title>
+</head>
+<body>
+    <h2>Numbers 1 to 10 (For Loop)</h2>
+    <button onclick="printForLoop()">Print</button>
+    <p id="forResult"></p>
+
+    <script>
+        function printForLoop() {
+            let result = "";
+
+            for (let i = 1; i <= 10; i++) {
+                result += i + " ";
+            }
+
+            document.getElementById("forResult").innerText = result;
+        }
+    </script>
+</body>
+</html>

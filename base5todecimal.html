@@ -1,0 +1,33 @@
+// WAP to convert a base 5 number to decimal.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function base5todecimal(n){
+            let d=0;
+            let i=0;
+            while(n!=0){
+                d+=n%10*Math.pow(5,i);
+                n=Math.floor(n/10);
+                i++;
+
+            }
+        }
+        
+            document.write("Base 5 number is: "+n+"<br>");
+            document.write("Decimal number is: "+d+"<br>");
+        
+        
+        
+    </script>
+        <h1>Base 5 to Decimal</h1>
+        <p>Enter a base 5 number:</p>
+        <input type="text" id="base5" />
+        <button onclick="base5todecimal(document.getElementById('base5').value)">Convert</button>
+</body>
+</html>

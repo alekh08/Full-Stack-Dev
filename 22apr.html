@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x= prompt("Enter Numerator");
+        var y= prompt("Enter Denominator");
+
+        try{
+            if (y==0){
+                throw new Error("Denominator cannot be zero");
+            }
+            else{
+                var result= x/y;
+                console.log("Result: " + result);
+            }
+        }
+        catch(e){
+            // console.log("Error:" +e.message);
+            // document.write("<br>"+e.name);
+            document.write(e);
+            
+        }
+    </script>
+</body>
+</html>

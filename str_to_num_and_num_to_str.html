@@ -1,0 +1,38 @@
+// Write a js program that converts a string to a number and a number to a string. show the results and their types before and after the conversion
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Function to convert string to number and number to string
+    function convertTypes() {
+        // String to number conversion
+        let str = "123"; // String variable
+        let numFromStr = Number(str); // Convert string to number
+
+        // Number to string conversion
+        let num = 456; // Number variable
+        let strFromNum = String(num); // Convert number to string
+
+        // Display results and their types before conversion
+        console.log("Before Conversion:");
+        console.log("String: " + str + ", Type: " + typeof str);
+        console.log("Number: " + num + ", Type: " + typeof num);
+
+        // Display results and their types after conversion
+        console.log("After Conversion:");
+        console.log("Converted Number: " + numFromStr + ", Type: " + typeof numFromStr);
+        console.log("Converted String: " + strFromNum + ", Type: " + typeof strFromNum);
+    }
+
+    convertTypes(); // Call the function to perform conversions
+</script>
+<body>
+    <form>
+        <h1>String to Number and Number to String Conversion</h1>
+    </form>
+</body>
+</html>
